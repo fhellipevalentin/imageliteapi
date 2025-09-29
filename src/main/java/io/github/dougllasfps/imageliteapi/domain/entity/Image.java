@@ -25,8 +25,6 @@ public class Image {
     private String id;
 
     private String name;
-    @Lob
-    @Column(columnDefinition = "MEDIUMBLOB")
     private Long size;
 
     @Enumerated(EnumType.STRING)
@@ -35,6 +33,7 @@ public class Image {
     private LocalDateTime uploadDate;
     private String tags;
     @Lob
+    @Column(columnDefinition = "MEDIUMBLOB")
     private byte[] file;
 
     public String getFileName() {
