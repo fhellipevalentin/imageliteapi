@@ -25,7 +25,10 @@ public class Image {
     private String id;
 
     private String name;
+    @Lob
+    @Column(columnDefinition = "MEDIUMBLOB")
     private Long size;
+
     @Enumerated(EnumType.STRING)
     private ImageExtension extension;
     @CreatedDate
